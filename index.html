@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Paralax</title>
+</head>
+<body>
+  <header>
+      <a href="#" class="logo">TOTALE TI</a>
+       <ul>
+           <li><a href="#" class="active">Menu</a></li>
+           <li><a href="#">Sobre</a></li>
+           <li><a href="#">Software</a></li>
+           <li><a href="#">Contato</a></li>
+       </ul>
+  </header>  
+  <section>
+     <img src="stars.png" id="stars">
+     <img src="moon.png" id="moon">
+     <img src="mountains-behind.png" id="mountains-behind">
+     <h2 id="text">Apogeo Roccia</h2>
+     <a href="#sec" id="btn">Explorar</a>
+     <img src="front.png" id="front">
+  </section>
+  <div class="sec" id="sec">
+      <h2>Totale TI   |   Apogeo Roccia</h2>
+      <p>Software ERP segmentado no setor de rochas pronto para atender empresas de todos os portes.<br>
+        Possui uma diversidade de recursos que atende todas as demandas de processos da empresa, eliminando a necessidade de ferramentas complementares.<br>
+        Ferramentas e recursos avançados que contemplam todos os processos produtivos, todos as operações são integradas.<br>
+        Banco de dados SQL<br>
+        Integração com Power Bi<br>
+        Exportação de consultas em diversos formatos, excel, html, pdf.</p>
+
+       <h2>Módulo Comercial</h2> 
+       <p> Permite controlar todos os orçamentos, pedidos de materiais, carregamentos, comissões, trata limite de crédito dos clientes. <br>
+        Gerencia pré venda reservando materiais, integra com o controle de produção.<br>
+        Integra com ferramentas de vendas online, como mobgran.</p>
+        
+        
+    <h2>Módulo de Compras</h2>
+    <p>Solicitação de compras, obedecem às etapas de autorização, cotação e aprovação. <br>
+        Ordens de compra podem ser integrais ou parciais.<br>
+        Possibilita estabelecer limites por períodos através de valores acumulados nas contas financeiras.<br>
+        Controla registro de cotações de compras realizadas pra consulta futura por produto ou fornecedor.<br></p>
+        
+    <h2>Módulo de Estoque</h2>
+    <p> Controle individual dos estoques de blocos, chapas e recortados, incluindo seu beneficiamento e transformação, integrados ao controle de produção.<br>
+        Organização detalhada dos materiais de terceiros e matériais próprios em posse de terceiros.<br>
+        Controle de inspeção de materiais, classificação e identificação de defeitos.<br>
+        Controle de materiais por dureza, classes, para acompanhamento da eficiência de insumos.<br></p>
+        
+    <h2>Módulo Financeiro</h2>
+    <p>Também é totalmente integrado, seguro e agil.<br>
+        Gerado a partir de notas de entrada e saída e manualmente.<br>
+        Relatórios detalhados de DRE, balancete, DFC.<br></p>
+    
+    <h2>Módulo Faturamento</h2>
+    <p>NFe<br>
+        NFSe<br>
+        CTe<br>
+        NFT<br></p>
+        
+   <h2>Módulo Fiscal</h2>
+   <p> MDe - Manifestação do Destinatário.<br>
+        MDFe- Manifesto de Documentos Fiscais.<br>
+        Sped Pis Cofins e ICMS IPI tratados dentro do sistema.<br>
+        Livros Fiscais.<br></p>
+    
+    <h2>Módulo Mercado Externo</h2>
+    <p>Proforma<br> 
+        Packing List<br>
+        Commercial Invoice<br></p>
+        
+    <h2>Módulo Financeiro Mercado Externo</h2>
+    <p>Relatórios de variação cambial.<br>
+        Credit Memo<br>
+        Carta de Crédito<br></p>
+        
+    <h2>Módulo Controladoria</h2>
+    <p> Fornece informações que são adequadas ao processo decisório, diversos relatórios pensados para serem analisados para tomadas de decisões, focados na produtividade.<br>
+        eficiência, lucratividade e redução de custos.<br></p>
+        
+    <h2>Módulo de Produção</h2>
+    <p>Programação de processos de serrada e beneficiamento.<br>
+        Todos os processos de serrada e beneficiamentos são tratados dentro do sistema.<br></p>
+    
+    <h2>Módulo de Custos</h2>
+    <p>Apropriação e apuração de custos diretos são determinados de forma simples, porém de forma eficiente ao longo dos processos de beneficamento.<br></p>
+        
+    <h2>Transporte</h2>
+    <p>Contempla tanto empresas que vão fazer uso de transporte de terceiros quanto empresas que possuem sua propria frota.<br></p>
+  </div>
+
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains-behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let front = document.getElementById('front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+    })
+</script>
+
+</body>
+</html>
